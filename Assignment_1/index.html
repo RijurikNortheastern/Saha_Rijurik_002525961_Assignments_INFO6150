@@ -4,7 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>What is Astrology?</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Favicon for browser tab -->
+  <link rel="icon" type="image/png" href="favicons/idea.png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,15 +20,14 @@
       <li><a href="#intro">Home</a></li>
       <li><a href="#zodiac">Zodiac</a></li>
       <li><a href="#contactForm">Learn</a></li>
-      <li><a href="#aside-title">Contact</a></li>
+      <li><a href="#aside-1-title">Contact</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- Single flex container: sections + aside -->
     <div class="main-row">
       <div class="sections">
-        <!-- ROW 1: Intro Section -->
+        <!-- ROW 1 -->
         <section id="intro" aria-labelledby="intro-title">
           <h2 id="intro-title">Understanding Astrology</h2>
           <article>
@@ -34,7 +36,9 @@
               to reflect personality, relationships, and life cycles.
             </p>
             <figure>
-              <img src="https://www.shutterstock.com/image-photo/zodiac-signs-astrology-constellations-concepts-600nw-2592693115.jpg" alt="Sample astrology birth chart" />
+              <img src="https://www.shutterstock.com/image-photo/zodiac-signs-astrology-constellations-concepts-600nw-2592693115.jpg" 
+                   alt="Sample astrology birth chart" />
+                   <figcaption>Img 1</figcaption>
             </figure>
           </article>
 
@@ -52,11 +56,7 @@
           <table>
             <caption>12 Zodiac Signs — symbol & element</caption>
             <thead>
-              <tr>
-                <th>Sign</th>
-                <th>Symbol</th>
-                <th>Element</th>
-              </tr>
+              <tr><th>Sign</th><th>Symbol</th><th>Element</th></tr>
             </thead>
             <tbody>
               <tr><td>Aries</td><td>Ram</td><td>Fire</td></tr>
@@ -75,17 +75,19 @@
           </table>
         </section>
 
-        <!-- ROW 2: Zodiac Section -->
+        <!-- ROW 2 -->
         <section id="zodiac" aria-labelledby="zodiac-title">
           <h2 id="zodiac-title">Deep Dive: Zodiac & Media</h2>
 
           <article>
             <h3>Multimedia</h3>
             <p>Watch a short intro or listen to a guided zodiac audio.</p>
+
             <video controls preload="metadata" width="420" aria-label="Astrology introduction video">
               <source src="video.mp4" type="video/mp4" />
               Your browser does not support the video element.
             </video>
+
             <audio controls aria-label="Zodiac audio sample">
               <source src="music.mp3" type="audio/mpeg" />
               Your browser does not support the audio element.
@@ -95,13 +97,17 @@
           <article>
             <h3>Learn more</h3>
             <p>Use the contact form to request a beginner's guide PDF.</p>
+
             <form id="contactForm" action="#" method="post" autocomplete="on">
               <label for="fullname">Full name</label>
               <input type="text" id="fullname" name="fullname" required />
+
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required />
+
               <label for="pwd">Password</label>
               <input type="password" id="pwd" name="pwd" required />
+
               <label for="interest">I'm interested in</label>
               <input list="topics" id="interest" name="interest" placeholder="Choose or type..." />
               <datalist id="topics">
@@ -110,42 +116,40 @@
                 <option value="Compatibility">
                 <option value="Planet Transits">
               </datalist>
+
               <button type="submit">Request Guide</button>
             </form>
           </article>
         </section>
       </div>
 
-      <!-- SINGLE ASIDE for both sections -->
-      <aside aria-labelledby="aside-title">
-        <h3 id="aside-title">Did You Know & Resources</h3>
+      <!-- SINGLE ASIDE -->
+      <aside aria-labelledby="aside-1-title">
+        <h3 id="aside-1-title">Did You Know?</h3>
         <p>
           The word <em>astrology</em> comes from the Greek <strong>astron</strong> (star) + <strong>logos</strong> (study).
         </p>
+
         <details>
           <summary>Fun facts</summary>
           <ul>
             <li>Traditional astrology uses 12 zodiac signs.</li>
             <li>Some cultures use sidereal zodiac; others use tropical zodiac.</li>
-            <li>Contact & resources are included here for your convenience.</li>
           </ul>
         </details>
+
         <p><strong>Quick links:</strong></p>
-        <ul>
-          <li><a href="#intro">Intro Article</a></li>
-          <li><a href="#zodiac">Zodiac Table</a></li>
-        </ul>
-        <p>
-          Call us: <a href="tel:+1234567890">+1 (234) 567-890</a><br />
-          Email: <a href="mailto:info@astrologyhub.com">info@astrologyhub.com</a>
-        </p>
+        <p><a href="#zodiac">Explore Zodiac signs</a></p>
+
+        <p>Call us: <a href="tel:+1234567890">+1 (234) 567-890</a><br />
+           Email: <a href="mailto:info@astrologyhub.com">info@astrologyhub.com</a></p>
       </aside>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Astrology Hub — All rights reserved.</p>
-    <p>Created for Assignment 1 — HTML5 semantic layout demo.</p>
+    <p>&copy; 2025-RijurikSaha Assignment 1</p>
+    <p>Created for Assignment 1</p>
   </footer>
 </body>
 </html>
