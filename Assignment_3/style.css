@@ -81,17 +81,14 @@ tbody tr.selected {
 /* Arrow Styles */
 .arrow {
     display: inline-block;
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 12px solid #4CAF50;
-    transition: transform 0.3s;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .arrow.rotated {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 /* Details Row */

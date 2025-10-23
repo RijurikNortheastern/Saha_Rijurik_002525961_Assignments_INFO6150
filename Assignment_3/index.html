@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-info">
+        <h1>Student Management System</h1>
+        <p><strong>Full Name:</strong> <span id="fullName">Rijurik Saha</span></p>
+        <p><strong>NUID:</strong> <span id="nuid">002525961</span></p>
+    </div>
+
+    <div class="table-container">
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th class="checkbox-cell"></th>
+                    <th class="arrow-cell"></th>
+                    <th>STUDENT</th>
+                    <th>ADVISOR</th>
+                    <th>AWARD STATUS</th>
+                    <th>SEMESTER</th>
+                    <th>TYPE</th>
+                    <th>BUDGET #</th>
+                    <th>PERCENTAGE</th>
+                    <th>DELETE</th>
+                    <th>EDIT</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Student 1 -->
+                <tr id="row-1">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" id="checkbox-1" onchange="handleCheckboxChange(1)">
+                    </td>
+                    <td class="arrow-cell">
+                        <img src="arrow.png" class="arrow" id="arrow-1" onclick="toggleDetails(1)" alt="expand">
+                    </td>
+                    <td>Student 1</td>
+                    <td>Teacher 1</td>
+                    <td>Approved</td>
+                    <td>Fall</td>
+                    <td>TA</td>
+                    <td>12345</td>
+                    <td>100%</td>
+                    <td id="delete-1"></td>
+                    <td id="edit-1"></td>
+                </tr>
+                <tr id="details-1" class="details-row">
+                    <td colspan="11" class="details-cell">
+                        <strong>Student 1 Details:</strong><br><br>
+                        Award Details: Honors Student<br>
+                        Fall 1-2024(TA)<br>
+                        Comments: Outstanding<br>
+                        Award Status: A
+                    </td>
+                </tr>
+
+                <!-- Student 2 -->
+                <tr id="row-2">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" id="checkbox-2" onchange="handleCheckboxChange(2)">
+                    </td>
+                    <td class="arrow-cell">
+                        <img src="arrow.png" class="arrow" id="arrow-2" onclick="toggleDetails(2)" alt="expand">
+                    </td>
+                    <td>Student 2</td>
+                    <td>Teacher 2</td>
+                    <td>Approved</td>
+                    <td>Fall</td>
+                    <td>TA</td>
+                    <td>23456</td>
+                    <td>100%</td>
+                    <td id="delete-2"></td>
+                    <td id="edit-2"></td>
+                </tr>
+                <tr id="details-2" class="details-row">
+                    <td colspan="11" class="details-cell">
+                        <strong>Student 2 Details:</strong><br><br>
+                        Award Details: Honors Student<br>
+                        Fall 1-2024(TA)<br>
+                        Comments: Outstanding<br>
+                        Award Status: A
+                    </td>
+                </tr>
+
+                <!-- Student 3 -->
+                <tr id="row-3">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" id="checkbox-3" onchange="handleCheckboxChange(3)">
+                    </td>
+                    <td class="arrow-cell">
+                        <img src="arrow.png" class="arrow" id="arrow-3" onclick="toggleDetails(3)" alt="expand">
+                    </td>
+                    <td>Student 3</td>
+                    <td>Teacher 3</td>
+                    <td>Approved</td>
+                    <td>Fall</td>
+                    <td>TA</td>
+                    <td>34567</td>
+                    <td>100%</td>
+                    <td id="delete-3"></td>
+                    <td id="edit-3"></td>
+                </tr>
+                <tr id="details-3" class="details-row">
+                    <td colspan="11" class="details-cell">
+                        <strong>Student 3 Details:</strong><br><br>
+                        Award Details: Honors Student<br>
+                        Fall 1-2024(TA)<br>
+                        Comments: Outstanding<br>
+                        Award Status: A
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="button-container">
+        <button id="submitBtn" disabled>SUBMIT SELECTED AWARDS</button>
+        <button id="addStudentBtn">Add New Student</button>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Edit details of Student</h3>
+            <input type="text" id="modalInput" placeholder="Enter new details">
+            <div class="modal-buttons">
+                <button onclick="cancelEdit()">Cancel</button>
+                <button onclick="confirmEdit()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
