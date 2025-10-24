@@ -42,4 +42,4 @@ Styled headers, nav, tables, forms, buttons, images, and multimedia.
 
 Favicon
 
-Custom favicon stored in faviconsidea.png.
+Custom favicon stored in favicons folder.
