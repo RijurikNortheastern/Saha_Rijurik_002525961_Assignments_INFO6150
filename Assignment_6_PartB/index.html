@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Event Stopwatch</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="stopwatch.js" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Event Stopwatch</h2>
+
+    <div class="timer-display" id="timer">00:00:00</div>
+
+    <label>Date</label>
+    <input type="date" id="eventDate">
+    <div class="error" id="dateError"></div>
+
+    <label>Event Name</label>
+    <input type="text" id="eventName" placeholder="What are you timing?">
+    <div class="error" id="nameError"></div>
+
+    <div class="btn-group">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="stopBtn" disabled>Stop & Save</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <h3>Session History</h3>
+    <input type="date" id="filterDate">
+    <button id="filterBtn">Filter</button>
+    <button id="clearFilterBtn">Clear Filter</button>
+
+    <div id="stats"></div>
+    <div id="history"></div>
+
+</div>
+
+</body>
+</html>
