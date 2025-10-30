@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment 4 — Feedback Form</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header class="page-header">
+            <h1>Feedback</h1>
+            <p>Love something? Hate something? Let us know!</p>
+            <button id="aiAssistantBtn" type="button" aria-controls="aiChat" aria-expanded="false">🧠 AI
+                Assistant</button>
+        </header>
+
+        <!-- AI Chatbot (hidden by default) -->
+        <section id="aiChat" class="chatbot" aria-live="polite" hidden>
+            <div class="chat-header">
+                <strong>AI Assistant</strong>
+                <button id="closeChat" type="button" aria-label="Close chat">✕</button>
+            </div>
+            <div id="chatLog" class="chat-log" role="log" aria-label="Chat messages"></div>
+            <div class="chat-input">
+                <input id="chatQuestion" type="text" placeholder="Ask about email, phone, zip, required, address..." />
+                <button id="sendChat" type="button">Send</button>
+            </div>
+        </section>
+
+        <main>
+            <p class="note">Note: Fields marked with an asterisk (<span class="req">*</span>) are mandatory.</p>
+
+            <form id="feedbackForm" novalidate>
+                <!-- Title -->
+                <div class="field-group">
+                    <label class="field-label">Title <span class="req">*</span>:</label>
+                    <div class="field-inline">
+                        <label><input type="radio" name="title" value="Miss" /> Miss</label>
+                        <label><input type="radio" name="title" value="Mr." /> Mr.</label>
+                        <label><input type="radio" name="title" value="Mrs." /> Mrs.</label>
+                    </div>
+                    <div class="error" id="err-title"></div>
+                </div>
+
+                <!-- First Name -->
+                <div class="field-group">
+                    <label for="firstName" class="field-label">First Name <span class="req">*</span>:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="20" />
+                    <div class="error" id="err-firstName"></div>
+                </div>
+
+                <!-- Last Name -->
+                <div class="field-group">
+                    <label for="lastName" class="field-label">Last Name <span class="req">*</span>:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="20" />
+                    <div class="error" id="err-lastName"></div>
+                </div>
+
+                <!-- Email -->
+                <div class="field-group">
+                    <label for="emailId" class="field-label">Email ID <span class="req">*</span>:</label>
+                    <input type="email" id="emailId" name="emailId" placeholder="yourname@northeastern.edu" />
+                    <div class="error" id="err-emailId"></div>
+                </div>
+
+                <!-- Phone -->
+                <div class="field-group">
+                    <label for="phoneNumber" class="field-label">Phone Number <span class="req">*</span>:</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="(XXX) XXX-XXXX"
+                        inputmode="numeric" />
+                    <div class="error" id="err-phoneNumber"></div>
+                </div>
+
+                <!-- Street Address 1 (required) -->
+                <div class="field-group">
+                    <label for="address1" class="field-label">Street Address 1 <span class="req">*</span>:</label>
+                    <input type="text" id="address1" name="address1" placeholder="123 Main St" maxlength="50" />
+                    <div class="error" id="err-address1"></div>
+                </div>
+
+                <!-- Street Address 2 (optional, live counter) -->
+                <div class="field-group">
+                    <label for="address2" class="field-label">Street Address 2 (optional):</label>
+                    <input type="text" id="address2" name="address2" placeholder="Apt, Suite, Unit" maxlength="20" />
+                    <div class="meta" id="addr2Counter">0/20 characters used</div>
+                    <div class="error" id="err-address2"></div>
+                </div>
+
+                <!-- Zip Code -->
+                <div class="field-group">
+                    <label for="zipcode" class="field-label">Zip Code <span class="req">*</span>:</label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="12345" inputmode="numeric"
+                        maxlength="5" />
+                    <div class="error" id="err-zipcode"></div>
+                </div>
+
+                <!-- How did you hear -->
+                <div class="field-group">
+                    <label class="field-label">How did you hear <span class="req">*</span>:</label>
+                    <div class="field-inline" id="hearSources">
+                        <label><input type="checkbox" name="source" value="Facebook" /> Facebook</label>
+                        <label><input type="checkbox" name="source" value="Google" /> Google</label>
+                        <label><input type="checkbox" name="source" value="Yelp" /> Yelp</label>
+                    </div>
+                    <div class="error" id="err-source"></div>
+                </div>
+
+                <!-- Single-select list (5 elements) -->
+                <div class="field-group">
+                    <label for="topicSelect" class="field-label">Topic <span class="req">*</span>:</label>
+                    <select id="topicSelect" name="topic">
+                        <option value="">-- Select a Topic --</option>
+                        <option>Billing</option>
+                        <option>Technical Support</option>
+                        <option>Sales</option>
+                        <option>Events</option>
+                        <option>Careers</option>
+                    </select>
+                    <div class="error" id="err-topic"></div>
+                </div>
+
+                <!-- Dynamic checkbox + dynamic text input will be injected here -->
+                <div id="dynamicArea"></div>
+
+                <!-- Comments -->
+                <div class="field-group">
+                    <label for="comments" class="field-label">Comments <span class="req">*</span>:</label>
+                    <textarea id="comments" name="comments" placeholder="Your comments" rows="5" cols="30"></textarea>
+                    <div class="error" id="err-comments"></div>
+                </div>
+
+                <div class="actions">
+                    <button id="submitBtn" type="submit" disabled>Submit</button>
+                    <button id="resetBtn" type="reset">Reset</button>
+                </div>
+            </form>
+
+            <!-- Results table appears here after submit (and persists submissions) -->
+            <section id="resultsSection" aria-live="polite"></section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
