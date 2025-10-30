@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="calculator.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h3 id="welcomeText"></h3>
+        <button id="logoutBtn" class="logout">Logout</button>
+    </div>
+
+    <h2>Calculator</h2>
+
+    <label>Number 1</label>
+    <input type="text" id="num1">
+    <div class="error" id="num1Err"></div>
+
+    <label>Number 2</label>
+    <input type="text" id="num2">
+    <div class="error" id="num2Err"></div>
+
+    <div class="btn-group">
+        <button class="op" data-op="add">Add</button>
+        <button class="op" data-op="subtract">Subtract</button>
+        <button class="op" data-op="multiply">Multiply</button>
+        <button class="op" data-op="divide">Divide</button>
+    </div>
+
+    <label>Result</label>
+    <input type="text" id="result" readonly>
+</div>
+</body>
+</html>

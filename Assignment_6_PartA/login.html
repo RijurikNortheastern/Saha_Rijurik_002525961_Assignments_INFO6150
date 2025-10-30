@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="login.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="text" id="email" placeholder="name@northeastern.edu">
+            <div class="error" id="emailError"></div>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Minimum 8 characters">
+            <div class="error" id="passError"></div>
+
+            <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+
+            <button type="submit" id="loginBtn" disabled>Login</button>
+
+            <div class="error" id="loginError"></div>
+            <div class="success" id="loginSuccess"></div>
+        </form>
+    </div>
+</body>
+
+</html>
