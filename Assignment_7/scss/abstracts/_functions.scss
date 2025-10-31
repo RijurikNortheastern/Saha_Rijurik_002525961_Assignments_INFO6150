@@ -1,0 +1,30 @@
+// Calculate rem from pixels
+@function rem($pixels, $base: 16) {
+    @return #{$pixels / $base}rem;
+}
+
+// Color manipulation function
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+// Z-index management
+@function z($layer) {
+    $z-layers: (
+        'modal': 1000,
+        'overlay': 900,
+        'dropdown': 800,
+        'header': 700,
+        'default': 1
+    );
+    @return map-get($z-layers, $layer);
+}
+
+// Spacing calculator
+@function space($multiplier) {
+    @return calc(#{$spacing-md} * #{$multiplier});
+}

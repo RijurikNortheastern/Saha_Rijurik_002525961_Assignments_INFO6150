@@ -1,0 +1,67 @@
+// Keyframe animations
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+// Planet animation
+.planet {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $accent-color, shade($accent-color, 30%));
+    @extend %absolute-center;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 0 50px rgba($accent-color, 0.5);
+}
+
+// Orbit system
+.orbit-system {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    
+    .orbit {
+        position: absolute;
+        border: 2px solid rgba($text-light, 0.2);
+        border-radius: 50%;
+        @extend %absolute-center;
+        
+        &.orbit-1 {
+            width: 100px;
+            height: 100px;
+            animation: rotate 10s linear infinite;
+        }
+        
+        &.orbit-2 {
+            width: 200px;
+            height: 200px;
+            animation: rotate 15s linear infinite reverse;
+        }
+        
+        &.orbit-3 {
+            width: 300px;
+            height: 300px;
+            animation: rotate 20s linear infinite;
+        }
+    }
+    
+    .planet-center {
+        width: 50px;
+        height: 50px;
+        background: $accent-color;
+        border-radius: 50%;
+        @extend %absolute-center;
+    }
+}

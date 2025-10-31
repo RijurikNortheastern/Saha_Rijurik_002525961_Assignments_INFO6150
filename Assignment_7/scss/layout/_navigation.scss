@@ -1,0 +1,62 @@
+.navigation {
+    @include glass-effect(15px, 0.15);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: z('header');
+    
+    .nav-container {
+        @include flex-center(row, space-between, center);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: $spacing-md $spacing-lg;
+    }
+    
+    .nav-logo {
+        .logo-text {
+            font-size: rem(24);
+            font-weight: bold;
+            color: $text-light;
+        }
+    }
+    
+    .nav-menu {
+        @include flex-center(row, center, center);
+        gap: $spacing-lg;
+        
+        @include respond-to('mobile') {
+            display: none;
+        }
+    }
+    
+    .nav-link {
+        @extend %button-base;
+        color: $text-light;
+        padding: $spacing-sm $spacing-md;
+        
+        &.active,
+        &:hover {
+            background: rgba($accent-color, 0.2);
+        }
+    }
+    
+    .nav-toggle {
+        display: none;
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        
+        @include respond-to('mobile') {
+            display: flex;
+        }
+        
+        span {
+            width: 25px;
+            height: 3px;
+            background: $text-light;
+            margin: 2px 0;
+            transition: $transition-speed;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// main.scss - Entry point for all styles
+// Demonstrates all required SASS/SCSS features
+
+// Import all partial files
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/placeholders';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/footer';
+
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/hero';
+@import 'components/animations';
+
+@import 'pages/home';
+@import 'pages/missions';
+
+@import 'utilities/helpers';

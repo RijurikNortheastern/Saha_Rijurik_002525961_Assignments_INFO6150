@@ -1,31 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Hub - Home</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration - Journey Beyond Earth</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-    <header class="site-header">
-        <h1>Tech Learning Hub</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-        </nav>
-    </header>
-    <section class="hero-grid">
-        <div class="hero-text">
-            <h2>Learn Tech Faster 🚀</h2>
-            <p>Top resources to master programming, cloud & AI</p>
+    <!-- Navigation - Flexbox Layout #1 -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">🚀 SpaceX</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="missions.html" class="nav-link">Missions</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <img src="https://via.placeholder.com/400" alt="banner" />
-    </section>
-    <footer class="site-footer">
-        <p>© 2025 Tech Hub</p>
-    </footer>
-</body>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explore the <span class="highlight">Universe</span></h1>
+            <p class="hero-subtitle">Journey beyond the boundaries of Earth and discover the wonders of space</p>
+            <div class="hero-buttons">
+                <a href="#explore" class="cta-button primary">Start Exploring</a>
+                <a href="missions.html" class="cta-button secondary">View Missions</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="planet"></div>
+            <div class="stars"></div>
+        </div>
+    </section>
+
+    <!-- Features Grid - CSS Grid Layout #1 -->
+    <section class="features" id="explore">
+        <div class="container">
+            <h2 class="section-title">Why Space Matters</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Earth Observation</h3>
+                    <p>Monitor climate change and natural disasters from orbit</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛰️</div>
+                    <h3>Satellite Technology</h3>
+                    <p>Enable global communications and GPS navigation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Scientific Research</h3>
+                    <p>Conduct experiments in zero gravity environments</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Space Tourism</h3>
+                    <p>Opening new frontiers for civilian space travel</p>
+                </div>
+                <div class="feature-card featured">
+                    <div class="feature-icon">👩‍🚀</div>
+                    <h3>Human Exploration</h3>
+                    <p>Preparing for missions to Mars and beyond. The next giant leap for mankind awaits.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💫</div>
+                    <h3>Asteroid Mining</h3>
+                    <p>Harvesting resources from space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section - Flexbox Layout #2 -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">Space Exploration Timeline</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">1957</div>
+                    <div class="timeline-content">
+                        <h3>Sputnik 1</h3>
+                        <p>First artificial satellite launched</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1969</div>
+                    <div class="timeline-content">
+                        <h3>Moon Landing</h3>
+                        <p>Apollo 11 lands on the Moon</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1998</div>
+                    <div class="timeline-content">
+                        <h3>ISS Construction</h3>
+                        <p>International Space Station begins</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>Commercial Crew</h3>
+                        <p>Private companies reach ISS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="573">0</div>
+                    <div class="stat-label">Humans in Space</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="4500">0</div>
+                    <div class="stat-label">Active Satellites</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Moon Walkers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="400">0</div>
+                    <div class="stat-label">Days in Space (Record)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Pushing the Boundaries</h2>
+                    <p>Space exploration represents humanity's greatest adventure. From the first satellite to Mars rovers, we continue to expand our understanding of the cosmos.</p>
+                    <p>Join us as we explore the final frontier, developing technologies that will shape the future of our species.</p>
+                    <a href="missions.html" class="cta-button primary">Explore Missions</a>
+                </div>
+                <div class="about-visual">
+                    <div class="orbit-system">
+                        <div class="orbit orbit-1"></div>
+                        <div class="orbit orbit-2"></div>
+                        <div class="orbit orbit-3"></div>
+                        <div class="planet-center"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Space Exploration</h3>
+                    <p>Discovering the cosmos, one mission at a time.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="missions.html">Missions</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Space Exploration. Educational Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

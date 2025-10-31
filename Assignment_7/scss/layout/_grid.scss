@@ -1,0 +1,49 @@
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+  
+  @include respond-to('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include respond-to('mobile') {
+      grid-template-columns: 1fr;
+  }
+  
+  // Featured item spans 2 columns
+  .featured {
+      grid-column: span 2;
+      
+      @include respond-to('mobile') {
+          grid-column: span 1;
+      }
+  }
+}
+
+// CSS GRID LAYOUT #2
+.missions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-lg;
+  
+  .featured {
+      grid-column: span 2;
+      grid-row: span 2;
+      
+      @include respond-to('tablet') {
+          grid-column: span 1;
+          grid-row: span 1;
+      }
+  }
+}
+
+// Stats grid
+.stats-grid {
+  @include grid(4, $spacing-lg);
+}
+
+// Tech grid
+.tech-grid {
+  @include grid(4, $spacing-md);
+}

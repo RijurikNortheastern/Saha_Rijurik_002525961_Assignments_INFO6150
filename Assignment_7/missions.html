@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Missions - Historic & Future Expeditions</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">🚀 SpaceX</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="missions.html" class="nav-link active">Missions</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Missions Hero -->
+    <section class="missions-hero">
+        <div class="container">
+            <h1 class="page-title">Space Missions</h1>
+            <p class="page-subtitle">From historic achievements to future expeditions</p>
+        </div>
+    </section>
+
+    <!-- Mission Filters - Flexbox -->
+    <section class="mission-filters">
+        <div class="container">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Missions</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+                <button class="filter-btn" data-filter="planned">Planned</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missions Grid - CSS Grid Layout #2 -->
+    <section class="missions-grid-section">
+        <div class="container">
+            <div class="missions-grid">
+                <!-- Completed Missions -->
+                <div class="mission-card completed" data-category="completed">
+                    <div class="mission-header">
+                        <span class="mission-status">Completed</span>
+                        <span class="mission-year">1969</span>
+                    </div>
+                    <h3 class="mission-name">Apollo 11</h3>
+                    <p class="mission-description">First crewed mission to land on the Moon. Neil Armstrong and Buzz Aldrin walked on the lunar surface.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Duration</span>
+                            <span class="stat-value">8 days</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Crew</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card completed" data-category="completed">
+                    <div class="mission-header">
+                        <span class="mission-status">Completed</span>
+                        <span class="mission-year">1977</span>
+                    </div>
+                    <h3 class="mission-name">Voyager 1 & 2</h3>
+                    <p class="mission-description">Twin spacecraft exploring the outer planets and now in interstellar space.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Duration</span>
+                            <span class="stat-value">47+ years</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Distance</span>
+                            <span class="stat-value">24B km</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ongoing Missions -->
+                <div class="mission-card ongoing featured" data-category="ongoing">
+                    <div class="mission-header">
+                        <span class="mission-status">Ongoing</span>
+                        <span class="mission-year">1998-Present</span>
+                    </div>
+                    <h3 class="mission-name">International Space Station</h3>
+                    <p class="mission-description">Continuous human presence in space for scientific research and international cooperation. Home to astronauts from around the world.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Crew</span>
+                            <span class="stat-value">7</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Orbits/Day</span>
+                            <span class="stat-value">15.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card ongoing" data-category="ongoing">
+                    <div class="mission-header">
+                        <span class="mission-status">Ongoing</span>
+                        <span class="mission-year">2021-Present</span>
+                    </div>
+                    <h3 class="mission-name">James Webb Telescope</h3>
+                    <p class="mission-description">Revolutionary space telescope observing the early universe and exoplanets.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Distance</span>
+                            <span class="stat-value">1.5M km</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Mirror</span>
+                            <span class="stat-value">6.5m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card ongoing" data-category="ongoing">
+                    <div class="mission-header">
+                        <span class="mission-status">Ongoing</span>
+                        <span class="mission-year">2020-Present</span>
+                    </div>
+                    <h3 class="mission-name">Perseverance Rover</h3>
+                    <p class="mission-description">Searching for signs of ancient life on Mars and collecting samples.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Location</span>
+                            <span class="stat-value">Mars</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Samples</span>
+                            <span class="stat-value">20+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planned Missions -->
+                <div class="mission-card planned" data-category="planned">
+                    <div class="mission-header">
+                        <span class="mission-status">Planned</span>
+                        <span class="mission-year">2025</span>
+                    </div>
+                    <h3 class="mission-name">Artemis III</h3>
+                    <p class="mission-description">Return humans to the Moon, including the first woman and person of color.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Crew</span>
+                            <span class="stat-value">4</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Duration</span>
+                            <span class="stat-value">30 days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card planned" data-category="planned">
+                    <div class="mission-header">
+                        <span class="mission-status">Planned</span>
+                        <span class="mission-year">2030s</span>
+                    </div>
+                    <h3 class="mission-name">Mars Sample Return</h3>
+                    <p class="mission-description">Bring Martian soil and rock samples back to Earth for detailed analysis.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Samples</span>
+                            <span class="stat-value">30</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Journey</span>
+                            <span class="stat-value">2 years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mission-card planned" data-category="planned">
+                    <div class="mission-header">
+                        <span class="mission-status">Planned</span>
+                        <span class="mission-year">2029</span>
+                    </div>
+                    <h3 class="mission-name">Europa Clipper</h3>
+                    <p class="mission-description">Study Jupiter's moon Europa for potential habitability beneath its icy surface.</p>
+                    <div class="mission-stats">
+                        <div class="stat">
+                            <span class="stat-label">Flybys</span>
+                            <span class="stat-value">50</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Target</span>
+                            <span class="stat-value">Europa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2 class="section-title">Enabling Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">🚀</div>
+                    <h3>Reusable Rockets</h3>
+                    <p>Reducing launch costs by 90%</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚛️</div>
+                    <h3>Ion Propulsion</h3>
+                    <p>Efficient deep space travel</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h3>AI & Robotics</h3>
+                    <p>Autonomous exploration systems</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🛡️</div>
+                    <h3>Radiation Shielding</h3>
+                    <p>Protecting astronauts in deep space</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Vision -->
+    <section class="future-vision">
+        <div class="container">
+            <div class="vision-content">
+                <h2>The Next Frontier</h2>
+                <p>As we stand on the brink of becoming a multi-planetary species, our missions grow more ambitious. From establishing lunar bases to reaching Mars and beyond, humanity's journey into space has only just begun.</p>
+                <div class="vision-stats">
+                    <div class="vision-item">
+                        <h3>2030</h3>
+                        <p>Lunar Base Alpha</p>
+                    </div>
+                    <div class="vision-item">
+                        <h3>2040</h3>
+                        <p>First Mars Colony</p>
+                    </div>
+                    <div class="vision-item">
+                        <h3>2050</h3>
+                        <p>Asteroid Mining Operations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Space Exploration</h3>
+                    <p>Discovering the cosmos, one mission at a time.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="missions.html">Missions</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📧</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Space Exploration. Educational Project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

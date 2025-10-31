@@ -1,0 +1,111 @@
+.features {
+    @extend %section-padding;
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-lg;
+    }
+}
+
+// FLEXBOX LAYOUT #2
+.timeline {
+    @extend %section-padding;
+    background: rgba($primary-color, 0.9);
+    
+    .timeline-container {
+        @include flex-center(column, center, stretch);
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: $accent-color;
+            
+            @include respond-to('mobile') {
+                left: 30px;
+            }
+        }
+    }
+    
+    .timeline-item {
+        @include flex-center(row, center, center);
+        margin-bottom: $spacing-xl;
+        position: relative;
+        
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        @include respond-to('mobile') {
+            flex-direction: row !important;
+            margin-left: 60px;
+        }
+        
+        .timeline-date {
+            background: $accent-color;
+            color: white;
+            padding: $spacing-sm $spacing-md;
+            border-radius: $border-radius;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            @include respond-to('mobile') {
+                left: -60px;
+                transform: none;
+            }
+        }
+        
+        .timeline-content {
+            @include glass-effect();
+            padding: $spacing-lg;
+            border-radius: $border-radius;
+            width: 45%;
+            color: $text-light;
+            
+            @include respond-to('mobile') {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.statistics {
+    @extend %section-padding;
+}
+
+.about {
+    @extend %section-padding;
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-xl;
+        align-items: center;
+        
+        @include respond-to('tablet') {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .about-content {
+        color: $text-light;
+        
+        h2 {
+            margin-bottom: $spacing-lg;
+        }
+        
+        p {
+            margin-bottom: $spacing-md;
+            opacity: 0.9;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+.feature-card {
+  @extend %card-base;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  
+  &:hover {
+      transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+      font-size: rem(48);
+      margin-bottom: $spacing-md;
+  }
+  
+  h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-sm;
+  }
+  
+  p {
+      color: $text-dark;
+      opacity: 0.8;
+  }
+}
+
+.mission-card {
+  @extend %card-base;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: $accent-color;
+  }
+  
+  &.completed::before { background: #4caf50; }
+  &.ongoing::before { background: #2196f3; }
+  &.planned::before { background: #ff9800; }
+  
+  .mission-header {
+      @include flex-center(row, space-between, center);
+      margin-bottom: $spacing-md;
+      
+      .mission-status {
+          padding: $spacing-xs $spacing-sm;
+          border-radius: 20px;
+          font-size: rem(12);
+          font-weight: bold;
+          text-transform: uppercase;
+      }
+  }
+  
+  &.completed .mission-status {
+      background: tint(#4caf50, 80%);
+      color: #4caf50;
+  }
+  
+  &.ongoing .mission-status {
+      background: tint(#2196f3, 80%);
+      color: #2196f3;
+  }
+  
+  &.planned .mission-status {
+      background: tint(#ff9800, 80%);
+      color: #ff9800;
+  }
+}
+
+.stat-card {
+  @extend %card-base;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: $text-light;
+  
+  .stat-number {
+      font-size: rem(48);
+      font-weight: bold;
+      color: $accent-color;
+  }
+  
+  .stat-label {
+      font-size: rem(14);
+      text-transform: uppercase;
+      opacity: 0.8;
+  }
+}

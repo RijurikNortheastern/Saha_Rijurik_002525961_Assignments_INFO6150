@@ -1,0 +1,35 @@
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: $spacing-md;
+    }
+}
+
+h1 { font-size: rem(48); }
+h2 { font-size: rem(36); }
+h3 { font-size: rem(24); }
+h4 { font-size: rem(20); }
+h5 { font-size: rem(18); }
+h6 { font-size: rem(16); }
+
+p {
+    margin-bottom: $spacing-md;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    font-size: rem(36);
+    color: $text-light;
+    
+    // Using interpolation
+    &::after {
+        content: '';
+        display: block;
+        width: #{$spacing-xl * 2};
+        height: 4px;
+        background: $accent-color;
+        margin: $spacing-md auto 0;
+    }
+}

@@ -1,0 +1,29 @@
+.cta-button {
+    @extend %button-base;
+    
+    &.primary {
+        @include button-variant($accent-color);
+    }
+    
+    &.secondary {
+        @include button-variant(transparent, $text-light);
+        border: 2px solid $text-light;
+        
+        &:hover {
+            background: rgba($text-light, 0.1);
+        }
+    }
+}
+
+.filter-btn {
+    @extend %button-base;
+    background: transparent;
+    color: $text-light;
+    border: 2px solid rgba($text-light, 0.3);
+    
+    &.active,
+    &:hover {
+        background: $accent-color;
+        border-color: $accent-color;
+    }
+}

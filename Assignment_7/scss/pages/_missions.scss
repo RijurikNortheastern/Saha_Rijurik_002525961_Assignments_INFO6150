@@ -1,0 +1,96 @@
+.missions-hero {
+    padding-top: calc(#{$spacing-xl} + 60px);
+    padding-bottom: $spacing-xl;
+    text-align: center;
+    
+    .page-title {
+        font-size: rem(48);
+        color: $text-light;
+        margin-bottom: $spacing-md;
+    }
+    
+    .page-subtitle {
+        font-size: rem(20);
+        color: $text-light;
+        opacity: 0.8;
+    }
+}
+
+.mission-filters {
+    @extend %section-padding;
+    padding: $spacing-lg 0;
+    
+    .filter-container {
+        @include flex-center(row, center, center);
+        flex-wrap: wrap;
+        gap: $spacing-md;
+    }
+}
+
+.missions-grid-section {
+    @extend %section-padding;
+}
+
+.technologies {
+    @extend %section-padding;
+    background: rgba($secondary-color, 0.9);
+    
+    .tech-card {
+        @include glass-effect(10px, 0.05);
+        padding: $spacing-lg;
+        text-align: center;
+        color: $text-light;
+        transition: transform $transition-speed;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-icon {
+            font-size: rem(36);
+            margin-bottom: $spacing-md;
+        }
+    }
+}
+
+.future-vision {
+    @extend %section-padding;
+    text-align: center;
+    color: $text-light;
+    
+    .vision-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 $spacing-lg;
+        
+        h2 {
+            font-size: rem(36);
+            margin-bottom: $spacing-lg;
+        }
+        
+        p {
+            font-size: rem(18);
+            margin-bottom: $spacing-xl;
+            opacity: 0.9;
+        }
+    }
+    
+    .vision-stats {
+        @include flex-center(row, space-around, center);
+        flex-wrap: wrap;
+        gap: $spacing-xl;
+        
+        .vision-item {
+            h3 {
+                font-size: rem(32);
+                color: $accent-color;
+                margin-bottom: $spacing-sm;
+            }
+            
+            p {
+                font-size: rem(16);
+                opacity: 0.8;
+            }
+        }
+    }
+}
