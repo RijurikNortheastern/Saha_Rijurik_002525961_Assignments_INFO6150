@@ -1,33 +1,26 @@
 import axios from 'axios';
 
-// Change this URL to match your Node.js backend from Assignment 8
-const API_URL = 'http://localhost:5000/api'; // Update this with your actual backend URL
+const API_URL = 'http://localhost:5000/api';
 
 const authService = {
   login: async (username, password) => {
     try {
-      // For now, we'll simulate a successful login
-      // Replace this with actual API call to your backend
+      const response = await axios.post(`${API_URL}/auth/login`, {
+        username,
+        password
+      });
       
-      // Uncomment this when connecting to your backend:
-      // const response = await axios.post(`${API_URL}/auth/login`, {
-      //   username,
-      //   password
-      // });
-      // return response.data;
-
-      // Mock response for development
-      if (username && password) {
-        const mockResponse = {
-          success: true,
-          token: 'mock-jwt-token',
-          user: { username, id: Date.now() }
-        };
-        return mockResponse;
-      }
-      throw new Error('Invalid credentials');
+      return response.data;
+      
     } catch (error) {
-      throw error;
+      console.error('Login error:', error);
+      if (error.response && error.response.data) {
+        throw new Error(error.response.data.message || 'Login failed');
+      } else if (error.request) {
+        throw new Error('Cannot connect to server. Make sure backend is running on port 5000');
+      } else {
+        throw new Error('An error occurred during login');
+      }
     }
   },
 
