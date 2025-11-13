@@ -1,6 +1,6 @@
 :root {
   --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --secondary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  --secondary-gradient: linear-gradient(135deg, #00ff00 0%, #16213e 100%);
   --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -320,7 +320,7 @@ p {
 }
 
 .footer {
-  background: #1a1a2e;
+  background: #00ff00;
   color: #f5f5f5;
   margin-top: 4rem;
 }
@@ -441,7 +441,7 @@ p {
   margin-bottom: 1rem;
 }
 .feature-card h3 {
-  color: #1a1a2e;
+  color: #00ff00;
   margin-bottom: 0.5rem;
 }
 .feature-card p {
@@ -778,7 +778,7 @@ p {
 }
 
 .timeline {
-  background: rgba(26, 26, 46, 0.9);
+  background: rgba(0, 255, 0, 0.9);
 }
 .timeline .timeline-container {
   display: -webkit-box;
